@@ -1,4 +1,4 @@
-//Chapter 2 - datatype
+//Datatype
 #include <iostream>
 using namespace std;
 
