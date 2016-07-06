@@ -1,4 +1,4 @@
-//Chapter 3 - if statement
+//Chapter 1 - if statement
 #include <iostream>
 using namespace std;
 
