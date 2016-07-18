@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class VECTOR {
+class VERTEX {
 public:
 	float x;
 	float y;
@@ -17,9 +17,9 @@ public:
 
 class TRI {
 public:
-	VECTOR A;
-	VECTOR B;
-	VECTOR C;
+	VERTEX A;
+	VERTEX B;
+	VERTEX C;
 	NORMAL N;
 
 public:
@@ -28,23 +28,23 @@ public:
 	float AC() { return distance(A, C); };
 
 private:
-	float distance(VECTOR A, VECTOR B);
+	float distance(VERTEX A, VERTEX B);
 
 };
 
-float TRI::distance(VECTOR A, VECTOR B) {
+float TRI::distance(VERTEX A, VERTEX B) {
 	return sqrt((B.x - A.x)*(B.x - A.x) + (B.y - A.y)*(B.y - A.y) + (B.z - A.z)*(B.z - A.z));
 }
 
 int main(void) {
 
-	VECTOR A;
+	VERTEX A;
 	A.x =  1.0; A.y = 0.0; A.z = 0.0;
 
-	VECTOR B;
+	VERTEX B;
 	B.x = -1.0; B.y = 0.0; B.z = 0.0;
 
-	VECTOR C;
+	VERTEX C;
 	C.x =  0.0; C.y = 1.0; C.z = 0.0;
 
 	NORMAL N;
